@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- Left most column (big column), Right most column (small column) -->
+	<definition name="two_column_right_menu_layout" template="/WEB-INF/views/layouts/two_column_right_menu_layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />
+		<put-attribute name="html_head" value="" /> 
+		<put-attribute name="left-column" value="" /> 
+		<put-attribute name="right-column" value="" /> 
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+	</definition>
+	
+	<!-- Home page -->	
+  	<definition name="home" extends="two_column_right_menu_layout">
+  	    <put-attribute name="right-column" value="/WEB-INF/views/right_panel.jsp" />
+  		<put-attribute name="left-column" value="/WEB-INF/views/left_panel.jsp" />
+ 	</definition> 
+ 	
+</tiles-definitions>
